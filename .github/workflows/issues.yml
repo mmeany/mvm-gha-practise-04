@@ -1,0 +1,9 @@
+name: React to issues
+on: issues
+jobs:
+    alert-me:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Alert
+              run: echo "${{toJson(github.event)}}"
+
